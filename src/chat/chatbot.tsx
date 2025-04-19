@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { io } from "socket.io-client";
 import { IoMdSend } from "react-icons/io";
 
-const socket = io("http://localhost:3000"); // Conexión persistente
+//const socket = io("http://localhost:8000"); // Conexión persistente
 
 const Chatbot = () => {
   const [mensaje, setMensaje] = useState("");
