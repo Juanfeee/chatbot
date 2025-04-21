@@ -3,11 +3,11 @@ import { InputLabel } from "../componentes/InputLabel"
 import TextInput from "../componentes/TextInput"
 import { set, SubmitHandler, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { loginSchema } from "../validaciones/loginSchema"
 import { toast, ToastContainer } from "react-toastify"
 import axios from "axios"
 import Cookies from "js-cookie"
 import InputErrors from "../componentes/InputErrors"
+import { loginSchema } from "../validaciones/loginSchema"
 
 type Inputs = {
   username: string;
@@ -19,7 +19,6 @@ const Login = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<Inputs>({ resolver: zodResolver(loginSchema) });
 
@@ -87,7 +86,7 @@ const Login = () => {
           <div className="text-start">
             <InputLabel
               htmlFor="username"
-              value="Email"
+              value="Usuario"
             />
             <TextInput
               placeholder="usuario"
