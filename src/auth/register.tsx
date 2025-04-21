@@ -78,13 +78,13 @@ const Register = () => {
         } else if (error.response) {
           switch (error.response.status) {
             case 400:
-              errorMessage = error.response.data?.message || "Usuario ya existe";
+              errorMessage =  "Usuario ya existe";
               break;
             case 500:
               errorMessage = "Error en el servidor";
               break;
             default:
-              errorMessage = error.response.data?.message || "Error desconocido";
+              errorMessage = "Error desconocido";
           }
         }
       }

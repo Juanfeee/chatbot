@@ -17,7 +17,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/register" element={<Register />}></Route>
         {/* <Route path="/chatbot" element={<Chatbot />}></Route> */}
         
-        <Route path="*" element={<h1>no found</h1>}></Route>
+        <Route path="*" element={<h1 className='text-white text-6xl font-bold'>No found</h1>}></Route>
         {/* rutas protegidas */}
         <Route path='/materia'
           element={<ProtectedRoute>
@@ -28,7 +28,6 @@ createRoot(document.getElementById('root')!).render(
           element={<ProtectedRoute>
             <Chatbot />
           </ProtectedRoute>} />
-
 
 
       </Route>
